@@ -1,0 +1,93 @@
+{
+	"info": {
+		"_postman_id": "d187bc48-62ff-4543-a113-4d61e3216641",
+		"name": "mygames_api_test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14405236"
+	},
+	"item": [
+		{
+			"name": "GET All Games",
+			"request": {
+				"method": "GET",
+				"url": {
+					"raw": "http://localhost/mygames_api/public/",
+					"protocol": "http",
+					"host": ["localhost"],
+					"path": ["mygames_api","public",""]
+				},
+				"header": []
+			}
+		},
+		{
+			"name": "POST Create Game",
+			"request": {
+				"method": "POST",
+				"header": [
+					{ "key": "Content-Type", "value": "application/json" }
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Elden Ring\",\n    \"publisher\": \"FromSoftware\",\n    \"category\": \"RPG\",\n    \"price\": 59.99,\n    \"rating\": 9.5\n}"
+				},
+				"url": {
+					"raw": "http://localhost/mygames_api/public/",
+					"protocol": "http",
+					"host": ["localhost"],
+					"path": ["mygames_api","public",""]
+				}
+			}
+		},
+		{
+			"name": "PUT Update Game",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{ "key": "Content-Type", "value": "application/json" }
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Elden Ring Updated\",\n    \"publisher\": \"Bandai Namco\",\n    \"category\": \"RPG\",\n    \"price\": 49.99,\n    \"rating\": 9.7\n}"
+				},
+				"url": {
+					"raw": "http://localhost/mygames_api/public/id/1",
+					"protocol": "http",
+					"host": ["localhost"],
+					"path": ["mygames_api","public","id","1"]
+				}
+			}
+		},
+		{
+			"name": "PATCH Update Game Price",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{ "key": "Content-Type", "value": "application/json" }
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"price\": 39.99\n}"
+				},
+				"url": {
+					"raw": "http://localhost/mygames_api/public/id/1",
+					"protocol": "http",
+					"host": ["localhost"],
+					"path": ["mygames_api","public","id","1"]
+				}
+			}
+		},
+		{
+			"name": "DELETE Game",
+			"request": {
+				"method": "DELETE",
+				"url": {
+					"raw": "http://localhost/mygames_api/public/id/1",
+					"protocol": "http",
+					"host": ["localhost"],
+					"path": ["mygames_api","public","id","1"]
+				},
+				"header": []
+			}
+		}
+	]
+}
